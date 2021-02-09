@@ -7,34 +7,45 @@ using namespace std;
 // 1. String 
 // 2. Starting index of the string 
 // 3. Ending index of the string. 
-void permute(string a, int l, int r) 
-{ 
-    // Base case 
-    if (l == r) 
-        cout<<a<<endl; 
+void test(int expected, int actal, string testcasename)
+{
+    if(expected == actual)
+    {
+	cout<<testcasename<<"PASSED\n";
+    }	
     else
-    { 
-        // Permutations made 
-        for (int i = l; i <= r; i++) 
-        { 
+    {
+	cout<<testcasename<<"FAILED\n";
+    }
+
+}
+bool arePermutation(string str1, string str2)
+{
+    // Get lenghts of both strings
+    int n1 = str1.length();
+    int n2 = str2.length();
  
-            // Swapping done 
-            swap(a[l], a[i]); 
+    // If length of both strings is not same,
+    // then they cannot be Permutation
+    if (n1 != n2)
+      return false;
  
-            // Recursion called 
-            permute(a, l+1, r); 
+    // Sort both strings
+    sort(str1.begin(), str1.end());
+    sort(str2.begin(), str2.end());
  
-            //backtrack 
-            swap(a[l], a[i]); 
-        } 
-    } 
-} 
+    // Compare sorted strings
+    for (int i = 0; i < n1;  i++)
+       if (str1[i] != str2[i])
+         return false;
+ 
+    return true;
+}
  
 // Driver Code 
 int main() 
 { 
-    string str = "ABC"; 
-    int n = str.size(); 
-    permute(str, 0, n-1); 
+    test(true, arePermutation("a","a"),"test_case_1")
+    test(true, arePermutation("abn","za"),"test_case_2")
     return 0; 
 } 
