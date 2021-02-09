@@ -1,5 +1,8 @@
 #!/bin/sh
 import os
 workspace=os.environ['WORKSPACE']
-print(workspace)
-print("Hello world")
+build_path=os.path.join(workspace,"build")
+os.chdir(build_path)
+os.system("cmake ..")
+os.system("make")
+os.system("./cmake-demo")
