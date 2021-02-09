@@ -7,7 +7,7 @@ using namespace std;
 // 1. String 
 // 2. Starting index of the string 
 // 3. Ending index of the string. 
-void test(int expected, int actal, string testcasename)
+void test(int expected, int actual, string testcasename)
 {
     if(expected == actual)
     {
@@ -45,7 +45,7 @@ bool arePermutation(string str1, string str2)
 // Driver Code 
 int main() 
 { 
-    test(true, arePermutation("a","a"),"test_case_1")
-    test(true, arePermutation("abn","za"),"test_case_2")
+    test(true, arePermutation("a","a"),"test_case_1");
+    test(true, arePermutation("abn","za"),"test_case_2");
     return 0; 
 } 
