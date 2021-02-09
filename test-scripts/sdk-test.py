@@ -1,3 +1,4 @@
+#!/bin/sh
 import os
 workspace=os.environ['WORKSPACE']
 print(workspace)
