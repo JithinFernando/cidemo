@@ -45,7 +45,7 @@ bool arePermutation(string str1, string str2)
 // Driver Code 
 int main() 
 { 
-    test(true, arePermutation("a","a")," Test_case_1");
-    test(true, arePermutation("abn","za")," Ttest_case_2");
+    test(true, arePermutation("a","a")," Test_case_1 ");
+    test(true, arePermutation("abn","za")," Test_case_2 ");
     return 0; 
 } 
