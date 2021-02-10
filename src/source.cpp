@@ -11,11 +11,11 @@ void test(int expected, int actual, string testcasename)
 {
     if(expected == actual)
     {
-	cout<<testcasename<<"PASSED\n";
+	cout<<testcasename<<"\tPASSED\n";
     }	
     else
     {
-	cout<<testcasename<<"FAILED\n";
+	cout<<testcasename<<"\tFAILED\n";
     }
 
 }
@@ -45,7 +45,7 @@ bool arePermutation(string str1, string str2)
 // Driver Code 
 int main() 
 { 
-    test(true, arePermutation("a","a"),"test_case_1");
-    test(true, arePermutation("abn","za"),"test_case_2");
+    test(true, arePermutation("a","a")," Test_case_1");
+    test(true, arePermutation("abn","za")," Ttest_case_2");
     return 0; 
 } 
