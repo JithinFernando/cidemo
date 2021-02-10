@@ -11,11 +11,11 @@ void test(int expected, int actual, string testcasename)
 {
     if(expected == actual)
     {
-	cout<<testcasename<<"\tPASSED\n";
+	cout<<testcasename<<"\t PASSED\n";
     }	
     else
     {
-	cout<<testcasename<<"\tFAILED\n";
+	cout<<testcasename<<"\t FAILED\n";
     }
 
 }
