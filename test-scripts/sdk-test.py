@@ -8,5 +8,6 @@ class test_sdk(object):
 	os.system("cmake ..")
 	os.system("make")
 	os.system("./cmake-demo")
+
 obj1=test_sdk()
 obj1.unittest_sdk()
